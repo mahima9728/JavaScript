@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>DOM Projects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .js-subs-btn {
+      padding: 12px 64px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background-color: #ff0000;
+      /* YouTube red */
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .js-subs-btn:hover {
+      background-color: #cc0000;
+      /* Darker red on hover */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .js-subs-btn:active {
+      background-color: #b20000;
+      transform: scale(0.98);
+    }
+
+    /* Style when the button changes to 'Subscribed!' */
+    .js-subs-btn.subscribed {
+      background-color: #4CAF50;
+      /* Green for 'Subscribed' */
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="subscribe()" class="js-subs-btn">Subscribe</button>
+  </div>
+
+  <script>
+    function subscribe() {
+      const buttonelement = document.querySelector('.js-subs-btn');
+      if (buttonelement.innerHTML === 'Subscribe') {
+        buttonelement.innerHTML = 'Subscribed!';
+        buttonelement.classList.add('subscribed');
+      } else {
+        buttonelement.innerHTML = 'Subscribe';
+        buttonelement.classList.remove('subscribed');
+      }
+    }
+  </script>
+</body>
+
+</html>

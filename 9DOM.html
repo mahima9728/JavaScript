@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document Object Model</title>
+</head>
+<body>
+  <button>Hello</button>
+  <button class="js-button">Hello2</button>
+  <script>
+    document.querySelector('.js-button');
+    console.log(document.querySelector('.js-button'));
+
+  document.querySelector('.js-button').innerHTML='Changed';
+  console.log(document.querySelector('.js-button'));
+
+  const buttonElement =document.querySelector('.js-button');
+  console.log(buttonElement);
+
+  </script>
+  
+</body>
+</html>
