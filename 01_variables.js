@@ -24,7 +24,7 @@
 // console.table([accountId, accountEmail, accountPassword, accountCity]);
 
 // normal code
-let x = 5;
+let x = 6;
 console.log(x);
 
 
